@@ -3,8 +3,53 @@
   padding: 0;
   box-sizing: border-box;
   
-  color: white;
-  background-color: black;
+  /* color: rgb(104, 101, 101); */
+  /* background-color: black; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
+}
+
+.sidebar{
+  background-color: black; 
+  color: white !important;
+  float: right;
+    width: 250px;
+    height: 100vh;
+    min-height: 400px;
+    overflow: auto;
+    /* background: #666161; */
+    padding: 30px;
+    text-align: right;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+a{
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* makes link text use parent’s color */
+  cursor: pointer;
+
+  padding: 5px;
+}
+
+ol{
+  list-style-type: none;
+  display: inline-flex;
+  margin-top: 10px;
+}
+
+.navbutton, .logo{
+  display: block;
+}
+
+
+.navbutton{
+  padding-bottom: 20px;
+}
+
+.logo{
+  margin-bottom: 60px;
+  margin-top: 50px;
+  font-size: 30px;
 }
