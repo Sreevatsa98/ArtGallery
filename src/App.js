@@ -2,6 +2,7 @@ import './App.css';
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import Hamburger from 'hamburger-react';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <aside>
         <h1 class='header'>Header</h1>
         <ul class='sidebar'>
+        <div id="burgericon"><Hamburger /></div>
           <li class='logo'><a href="#">Gallery</a></li>
           <li class='navbutton'><a href="#">Home</a></li>
           <li class='navbutton'><a href="#">About</a></li>
