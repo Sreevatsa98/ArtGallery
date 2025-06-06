@@ -5,6 +5,7 @@
   
   /* color: rgb(104, 101, 101); */
   background-color: black;
+  color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
 }
@@ -67,3 +68,31 @@ ol{
  transform: scale(1.1);
 }
 
+.handle, a{
+  padding-right: 10px;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* responsive columns */
+  gap: 10px; /* space between images */
+  padding: 10px;
+}
+
+div .gallery{
+  /* display: ; */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* crop/fit images nicely */
+  border-radius: 8px; /* optional rounded corners */
+  cursor: pointer; /* pointer cursor if you want clickable images */
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* slight zoom on hover */
+}

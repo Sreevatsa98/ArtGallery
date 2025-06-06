@@ -25,8 +25,6 @@ function App() {
 
   return (
     <div className='box'>
-      Hello World!
-
       {/* Show hamburger only on mobile */}
       {isMobile && (
         <div id="burgericon" style={{ position: 'fixed', top: 20, right: 20, zIndex: 1000 }}>
@@ -54,6 +52,39 @@ function App() {
           </ul>
         </aside>
       )}
+
+      <div class="gallery">
+        <img src="/images/image1.jpg" alt="Image Here!"/>
+        <img src="/images/image2.jpg" alt="Image Here!"/>
+        <img src="/images/image3.jpg" alt="Image Here!"/>
+        <img src="/images/image4.jpg" alt="Image Here!"/>
+        <img src="/images/image5.jpg" alt="Image Here!"/>
+        <img src="/images/image6.jpg" alt="Image Here!"/>
+        <img src="/images/image7.jpg" alt="Image Here!"/>
+        <img src="/images/image8.jpg" alt="Image Here!"/>
+        <img src="/images/image9.jpg" alt="Image Here!"/>
+        <img src="/images/image10.jpg" alt="Image Here!"/>
+        <img src="/images/image11.jpg" alt="Image Here!"/>
+        <img src="/images/image12.jpg" alt="Image Here!"/>
+        <img src="/images/image13.jpg" alt="Image Here!"/>
+        <img src="/images/image14.jpg" alt="Image Here!"/>
+        <img src="/images/image15.jpg" alt="Image Here!"/>
+        <img src="/images/image16.jpg" alt="Image Here!"/>
+        <img src="/images/image17.jpg" alt="Image Here!"/>
+        <img src="/images/image18.jpg" alt="Image Here!"/>
+        <img src="/images/image19.jpg" alt="Image Here!"/>
+        <img src="/images/image20.jpg" alt="Image Here!"/>
+        <img src="/images/image21.jpg" alt="Image Here!"/>
+        <img src="/images/image22.jpg" alt="Image Here!"/>
+        <img src="/images/image23.jpg" alt="Image Here!"/>
+        <img src="/images/image24.jpg" alt="Image Here!"/>
+        <img src="/images/image25.jpg" alt="Image Here!"/>
+        <img src="/images/image26.jpg" alt="Image Here!"/>
+        <img src="/images/image27.jpg" alt="Image Here!"/>
+        <img src="/images/image28.jpg" alt="Image Here!"/>
+        <img src="/images/image29.jpg" alt="Image Here!"/>
+        <img src="/images/image30.jpg" alt="Image Here!"/>
+      </div>
     </div>
   );
 }
