@@ -22,6 +22,28 @@ function App() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+  
+  //Display Image and move back and forth between images 
+  const [lightboxIndex, setLightboxIndex] = useState(null); // null = closed
+
+  const images = Array.from({ length: 30 }, (_, i) => `/images/image${i + 1}.jpg`);
+
+
+  function openLightbox(index) {
+    setLightboxIndex(index);
+  }
+
+  function closeLightbox() {
+    setLightboxIndex(null);
+  }
+
+  function goNext() {
+    setLightboxIndex((prev) => (prev + 1) % images.length);
+  }
+
+  function goPrev() {
+    setLightboxIndex((prev) => (prev - 1 + images.length) % images.length);
+  }
 
   return (
     <div className='box'>
@@ -54,37 +76,31 @@ function App() {
       )}
 
       <div class="gallery">
-        <img src="/images/image1.jpg" alt="Image Here!"/>
-        <img src="/images/image2.jpg" alt="Image Here!"/>
-        <img src="/images/image3.jpg" alt="Image Here!"/>
-        <img src="/images/image4.jpg" alt="Image Here!"/>
-        <img src="/images/image5.jpg" alt="Image Here!"/>
-        <img src="/images/image6.jpg" alt="Image Here!"/>
-        <img src="/images/image7.jpg" alt="Image Here!"/>
-        <img src="/images/image8.jpg" alt="Image Here!"/>
-        <img src="/images/image9.jpg" alt="Image Here!"/>
-        <img src="/images/image10.jpg" alt="Image Here!"/>
-        <img src="/images/image11.jpg" alt="Image Here!"/>
-        <img src="/images/image12.jpg" alt="Image Here!"/>
-        <img src="/images/image13.jpg" alt="Image Here!"/>
-        <img src="/images/image14.jpg" alt="Image Here!"/>
-        <img src="/images/image15.jpg" alt="Image Here!"/>
-        <img src="/images/image16.jpg" alt="Image Here!"/>
-        <img src="/images/image17.jpg" alt="Image Here!"/>
-        <img src="/images/image18.jpg" alt="Image Here!"/>
-        <img src="/images/image19.jpg" alt="Image Here!"/>
-        <img src="/images/image20.jpg" alt="Image Here!"/>
-        <img src="/images/image21.jpg" alt="Image Here!"/>
-        <img src="/images/image22.jpg" alt="Image Here!"/>
-        <img src="/images/image23.jpg" alt="Image Here!"/>
-        <img src="/images/image24.jpg" alt="Image Here!"/>
-        <img src="/images/image25.jpg" alt="Image Here!"/>
-        <img src="/images/image26.jpg" alt="Image Here!"/>
-        <img src="/images/image27.jpg" alt="Image Here!"/>
-        <img src="/images/image28.jpg" alt="Image Here!"/>
-        <img src="/images/image29.jpg" alt="Image Here!"/>
-        <img src="/images/image30.jpg" alt="Image Here!"/>
+        {images.map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt={`Image ${i + 1}`}
+            onClick={() => openLightbox(i)}
+          />
+        ))}  
       </div>
+
+      {/* Image Display */}
+      {lightboxIndex !== null && (
+        <div className="lightbox" onClick={closeLightbox}>
+          <button className="prev" onClick={(e) => { e.stopPropagation(); goPrev(); }}>&#10094;</button>
+          <img
+            src={images[lightboxIndex]}
+            alt={`Image ${lightboxIndex + 1}`}
+            onClick={e => e.stopPropagation()}
+            className="lightbox-image"
+          />
+          <button className="next" onClick={(e) => { e.stopPropagation(); goNext(); }}>&#10095;</button>
+          <button className="close" onClick={closeLightbox}>&times;</button>
+        </div>
+      )}  
+
     </div>
   );
 }
