@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sreevatsa98/ArtGallery/static/css/main.54b031d5.css",
+    "main.js": "/Sreevatsa98/ArtGallery/static/js/main.5f8800f9.js",
+    "static/js/453.aebe8bda.chunk.js": "/Sreevatsa98/ArtGallery/static/js/453.aebe8bda.chunk.js",
+    "index.html": "/Sreevatsa98/ArtGallery/index.html",
+    "main.54b031d5.css.map": "/Sreevatsa98/ArtGallery/static/css/main.54b031d5.css.map",
+    "main.5f8800f9.js.map": "/Sreevatsa98/ArtGallery/static/js/main.5f8800f9.js.map",
+    "453.aebe8bda.chunk.js.map": "/Sreevatsa98/ArtGallery/static/js/453.aebe8bda.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54b031d5.css",
+    "static/js/main.5f8800f9.js"
+  ]
+}
